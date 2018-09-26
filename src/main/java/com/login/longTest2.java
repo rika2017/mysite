@@ -12,6 +12,7 @@ public class longTest2 {
 			}else if(a[mid] < x) {
 				left = mid + 1;
 				
+				
 			}else if(a[mid] == x){
 				return true;
 				
