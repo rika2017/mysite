@@ -12,25 +12,30 @@
   	<finalName>mysite</finalName>
     <plugins>
      	<plugin>
-        	<groupId>org.jacoco</groupId>
+            <groupId>org.jacoco</groupId>
             <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.7.8</version>
+            <version>0.8.1</version>
+            <configuration>
+                <skip>false</skip>
+            </configuration>
             <executions>
-            	<execution>
-                	<goals>
-                    	<goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-                    
                 <execution>
-                    <id>report</id>
-                    <phase>prepare-package</phase>
                     <goals>
-                    	<goal>report</goal>
+                        <goal>prepare-agent</goal>
                     </goals>
                 </execution>
-           </executions>
-       </plugin>
+                <execution>
+                    <configuration>
+                        <outputDirectory>${basedir}/target/coverage-reports</outputDirectory>
+                    </configuration>
+                    <id>report</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>report</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
        
        <!--maven-surefire-plugin插件的configuration来配置不跳过单元测试 ;单元测试输出乱码 -->
        <plugin>
@@ -39,10 +44,16 @@
     		<version>2.5</version>
     		<configuration>
         		<skipTests>false</skipTests>
-        		<argLine>-Dfile.encoding=UTF-8</argLine>
+        		<argLine>${argLine} -Dfile.encoding=UTF-8</argLine>
     		</configuration>
 		</plugin>
-		
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <configuration>
+                <skip>false</skip>
+            </configuration>
+        </plugin>
 		<plugin>
     		<groupId>org.jacoco</groupId>
     		<artifactId>jacoco-maven-plugin</artifactId>
@@ -76,6 +87,11 @@
    
   </build>
   <dependencies>
+  	<dependency>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.1</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
