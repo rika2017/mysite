@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestCase" parallel="classes" thread-count="5">
+  <test name="Test" preserver-order="true">
+    <classes>    
+      <class name="mysite.TestLoginServlet"/>
+      <class name="mysite.test22"/>
+    </classes>
+  </test> <!-- Test -->
+  <listeners>
+    	<listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+  </listeners>
+</suite> <!-- Suite -->
