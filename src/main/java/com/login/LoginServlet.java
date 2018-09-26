@@ -39,6 +39,13 @@ public class LoginServlet extends HttpServlet{
 	       RequestDispatcher dispatcher = context.getRequestDispatcher(target);
 	       dispatcher.forward(request,response);
 	    
-	   }                    
+	   }  
+	   
+	   public void mytest() {
+		   int a;
+		   if (1 ==1 )
+			   a =1;
+		   
+	   }
 
 }
