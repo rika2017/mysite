@@ -14,6 +14,7 @@ public class longTest2 {
 				
 			}else if(a[mid] == x){
 				return true;
+				
 			}
 		}
 		return false;

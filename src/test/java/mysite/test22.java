@@ -13,6 +13,7 @@ public class test22 {
 	public void ss() {
 		ss = new longTest2();
 		
+		
 	}
 	
 	@Test
