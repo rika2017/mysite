@@ -21,7 +21,7 @@
         		<skipTests>false</skipTests>
         		<argLine>${argLine} -Dfile.encoding=UTF-8</argLine>
         		<suiteXmlFiles>
-                        <suiteXmlFile>src/test/java/resources/testng.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
     		</configuration>
 		</plugin>
