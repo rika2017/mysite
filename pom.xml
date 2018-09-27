@@ -19,7 +19,7 @@
     		<version>2.5</version>
     		<configuration>
         		<skipTests>false</skipTests>
-        		<argLine>${argLine} -Dfile.encoding=GBK</argLine>
+        		<argLine>${argLine} -Dfile.encoding=UTF-8</argLine>
     		</configuration>
 		</plugin>
 		<plugin>
