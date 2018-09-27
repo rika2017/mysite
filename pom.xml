@@ -20,6 +20,9 @@
     		<configuration>
         		<skipTests>false</skipTests>
         		<argLine>${argLine} -Dfile.encoding=UTF-8</argLine>
+        		<suiteXmlFiles>
+                        <suiteXmlFile>src/test/java/resources/testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
     		</configuration>
 		</plugin>
 		<plugin>
