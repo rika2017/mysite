@@ -20,7 +20,7 @@ public class test22 {
 		boolean result = ss.testSearch(a,2);
 		if(result == true) {
 			
-			System.out.println("123");
+			System.out.println("1235");
 		}else {
 			
 			System.out.println("456");
