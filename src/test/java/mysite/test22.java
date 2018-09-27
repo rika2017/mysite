@@ -2,8 +2,6 @@ package mysite;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.login.LoginServlet;
 import com.login.longTest2;
 
 public class test22 {
