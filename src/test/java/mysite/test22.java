@@ -20,6 +20,7 @@ public class test22 {
 		boolean result = ss.testSearch(a,2);
 		if(result == true) {
 			System.out.println("查找到了");
+			
 		}else {
 			
 			System.out.println("查不到");
