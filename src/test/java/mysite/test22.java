@@ -23,6 +23,7 @@ public class test22 {
 		if(result == true) {
 			System.out.println("查找到了");
 		}else {
+			
 			System.out.println("查不到");
 		} 
 		
